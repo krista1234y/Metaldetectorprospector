@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metal Detector Prospector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            flex-wrap: wrap;
+        }
+
+        h1 {
+            color: grey;
+            font-size: 36px;
+            position: relative;
+            z-index: 2;
+            margin: 0;
+            text-align: left;
+        }
+
+        .wire-wrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .wire {
+            stroke: black;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .man-image {
+            width: 100px;
+            margin-left: 20px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-left: auto;
+        }
+
+        .button-group button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button-group button:hover {
+            background-color: #555;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 8px;
+            height: 200px; /* Adjust this height as needed */
+            object-fit: cover;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Media Queries for Desktop */
+        @media (min-width: 768px) {
+            header {
+                flex-wrap: nowrap;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            .man-image {
+                width: 120px;
+                margin-left: 20px;
+            }
+
+            .image-gallery {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .image-gallery img {
+                max-width: 48%;
+                height: 200px; /* Adjust this height as needed */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Headline with wire wrapping -->
+        <h1 id="headline">Metal Detector Prospector
+            <!-- Customized SVG paths for wire wrap -->
+            <svg class="wire-wrap" viewBox="0 0 600 150" preserveAspectRatio="xMidYMid meet">
+                <path class="wire" d="M50,80 Q70,60 90,80 Q110,100 130,80" />
+                <path class="wire" d="M150,100 Q170,80 190,100 T230,100" />
+                <path class="wire" d="M250,80 Q270,60 290,80 T330,80" />
+                <path class="wire" d="M350,90 Q370,70 390,90 T430,90" />
+            </svg>
+        </h1>
+
+        <!-- Image of a little man holding a metal detector -->
+        <img src="https://example.com/little-man-metal-detector.png" alt="Little Man with Metal Detector" class="man-image">
+
+        <!-- Button group -->
+        <div class="button-group">
+            <button onclick="window.location.href='#contact'">Contact Us</button>
+            <button onclick="window.location.href='#book'">Book a Metal Detector Today</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <h2>About Us</h2>
+            <p>
+                Welcome to Metal Detector Prospector, your go-to source for everything related to metal detecting! Whether you're a seasoned professional or just starting out, we have the tools and resources you need to succeed in your treasure-hunting adventures.
+            </p>
+            <p>
+                Explore our range of high-quality metal detectors, read our comprehensive guides, and join our community of passionate prospectors. Let's uncover hidden treasures together!
+            </p>
+        </div>
+
+        <!-- Image Gallery Placeholder -->
+        <div class="image-gallery">
+            <img src="https://via.placeholder.com/400x200" alt="Placeholder Image 1">
+            <img src="https://via.placeholder.com/400x200" alt="Placeholder Image 2">
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <p>&copy; 2024 Metal Detector Prospector. All rights reserved.</p>
+        <p>Contact us: info@metaldetectorprospector.com</p>
+    </footer>
+
+    <!-- Additional Section for Booking (just as an example) -->
+    <div id="book" class="content" style="text-align: center; padding: 40px;">
+        <h2>Book Your Metal Detector</h2>
+        <p>To book a metal detector, please fill out the form on our contact page or reach out directly via email.</p>
+    </div>
+
+</body>
+</html>
